@@ -1,17 +1,20 @@
 import "./App.css";
 import { DebounceInput } from "react-debounce-input";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import ProductList from "./ProductList";
 
 function App() {
-  const [query, setQuery] = useState("");
   const [products, setProducts] = useState([]);
+
+  const formRef = useRef(null);
+
   const url =
     "https://rakuten_webservice-rakuten-marketplace-product-search-v1.p.rapidapi.com/services/api/Product/Search/20170426?";
 
   const handleSearch = (e) => {
     let term = e.target.value;
-    setQuery(term);
+
+    formRef.current.reset();
 
     fetch(`${url}keyword=${term}`, {
       method: "GET",
@@ -80,7 +83,7 @@ function App() {
       </div>
 
       <div className="filter-container">
-        <form>
+        <form ref={formRef}>
           <div className="form-control">
             <input
               id="low"
@@ -112,7 +115,6 @@ function App() {
       </div>
 
       <ProductList data={products} />
-
     </div>
   );
 }
