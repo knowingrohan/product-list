@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.app-container{
+  max-width: 1024px;
+  margin: auto;
+}
+
+.search-container{
+  text-align: center;
+  margin: 1em 0 ;
+  .search-bar{
+    width: 90%;
+    padding: 0.5em 1em;
+    color: #333;
+    font-size: 18px;
+  }
+}
+
+.filter-container{
+  margin: 1em;
+  form{
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1em;
+  .product {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    padding: 16px;
+    height: 100%;
+  }
+  .img-container {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    img {
+      max-width: 100%;
+    }
+  }
+  .description{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  h1 {
+    font-size: 18px;
+    color: #333;
+  }
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+}
