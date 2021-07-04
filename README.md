@@ -1,6 +1,6 @@
 # Getting Started with this project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and hosted at https://product-list-rakuten.netlify.app/
 
 ## Available Scripts
 
